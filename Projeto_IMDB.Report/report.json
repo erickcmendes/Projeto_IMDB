@@ -1,0 +1,87 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "d033d56860c4d073ec69",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"34b0bc2ab11582ccc0c2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":796.3517915309446,\"y\":324.16938110749186,\"z\":3,\"width\":464.88599348534206,\"height\":44.82084690553746,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Problema do dataset: alguns registros de \\\"budget\\\" (e possivelmente outros valores monetários) estão em moedas distintas.\"}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 44.82,
+          "width": 464.89,
+          "x": 796.35,
+          "y": 324.17,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"38e8d5f100b086e995e9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":593.0944625407167,\"y\":40.65146579804561,\"z\":5,\"width\":405.47231270358304,\"height\":36.48208469055375,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Qual gênero de filme com maior taxa de indicação a Oscar?\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 36.48,
+          "width": 405.47,
+          "x": 593.09,
+          "y": 40.65,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"7270416bb05a50707d15\",\"layouts\":[{\"id\":0,\"position\":{\"x\":27.10097719869707,\"y\":77.13355048859935,\"z\":4,\"width\":405.47231270358304,\"height\":574.3322475570033,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"filmes_nova - world_imdb_movies_top_movies_per_year.genre\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(filmes_nova - world_imdb_movies_top_movies_per_year.nomination)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"imdb_movies\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"genre\"},\"Name\":\"filmes_nova - world_imdb_movies_top_movies_per_year.genre\",\"NativeReferenceName\":\"genre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"nomination\"}},\"Function\":0},\"Name\":\"Sum(filmes_nova - world_imdb_movies_top_movies_per_year.nomination)\",\"NativeReferenceName\":\"Soma de nomination\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"nomination\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 574.33,
+          "width": 405.47,
+          "x": 27.10,
+          "y": 77.13,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"7b208b7394096d82da03\",\"layouts\":[{\"id\":0,\"position\":{\"x\":788.0130293159609,\"y\":384.6254071661238,\"z\":2,\"width\":480.5211726384365,\"height\":328.3387622149837,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Medidas.Budget\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.Arrecadação\"}],\"Category\":[{\"queryRef\":\"filmes_nova - world_imdb_movies_top_movies_per_year.title\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"imdb_movies\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Arrecadação\"},\"Name\":\"Medidas.Arrecadação\",\"NativeReferenceName\":\"Arrecadação\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Budget\"},\"Name\":\"Medidas.Budget\",\"NativeReferenceName\":\"Budget\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"title\"},\"Name\":\"filmes_nova - world_imdb_movies_top_movies_per_year.title\",\"NativeReferenceName\":\"title\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 328.34,
+          "width": 480.52,
+          "x": 788.01,
+          "y": 384.63,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"9fc11b6640c87852060a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":27.10097719869707,\"y\":40.65146579804561,\"z\":0,\"width\":405.47231270358304,\"height\":36.48208469055375,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Qual gênero de filme com maior taxa de indicação a Oscar?\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 36.48,
+          "width": 405.47,
+          "x": 27.10,
+          "y": 40.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b0eb356955a2ae8a5605\",\"layouts\":[{\"id\":0,\"position\":{\"x\":27.23404255319149,\"y\":270.3951367781155,\"z\":1,\"width\":405.5927051671733,\"height\":35.98784194528876,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"?\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 35.99,
+          "width": 405.59,
+          "x": 27.23,
+          "y": 270.40,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
