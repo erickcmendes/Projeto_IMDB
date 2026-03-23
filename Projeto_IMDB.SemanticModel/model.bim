@@ -4131,11 +4131,12 @@
             "annotations": [
               {
                 "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
+                "value": "{\"currencyCulture\":\"en-US\"}"
               }
             ],
             "displayFolder": "Arrecadação",
             "expression": "SUM('imdb_movies'[gross_world_wide])",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "lineageTag": "309cd5ff-4ff4-4e21-b4d7-2aaa4580d8ce"
           },
           {
@@ -4233,6 +4234,16 @@
               "\"U$ \" & FORMAT(vTicket, \"#,##0\")"
             ],
             "lineageTag": "c96067a7-41e3-415d-9ac4-4555affa3e35"
+          },
+          {
+            "name": "Arrecadação Formatado",
+            "expression": [
+              "",
+              "VAR vArre = [Arrecadação World_Wide]",
+              "RETURN",
+              "\"U$ \" & FORMAT(vArre, \"#,##0\")"
+            ],
+            "lineageTag": "e58f4287-f874-4b80-8831-3f0f2ddfe845"
           }
         ],
         "partitions": [
